@@ -3,6 +3,10 @@
     {
       "id": "Page1",
       "isDefault": true
+    },
+    {
+      "id": "页面1",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -11,7 +15,7 @@
   "color": "#D6D1F2",
   "icon": "moon",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
     "type": "DESKTOP"
