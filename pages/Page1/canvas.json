@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 890,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 65,
+          "version": 71,
           "minHeight": 1292,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -146,6 +146,7 @@
                       "isDeprecated": false,
                       "rightColumn": 41,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "yf7k1fdvns",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -155,7 +156,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "resetFormOnClick": false,
@@ -266,6 +269,7 @@
               "isDeprecated": false,
               "rightColumn": 43,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "vmzv7mkl6n",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -274,24 +278,31 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 456
+              "maxDynamicHeight": 9000,
+              "width": 456,
+              "minDynamicHeight": 4
             },
             {
-              "resetFormOnClick": false,
               "boxShadow": "none",
-              "widgetName": "Button3",
-              "onClick": "{{showModal('Modal1')}}",
+              "widgetName": "IconButton2",
+              "onClick": "{{postWindowMessage('', 'window', '*')}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "displayName": "按钮",
-              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "displayName": "图标按钮",
+              "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
               "searchTags": [
                 "click",
-                "submit"
+                "submit",
+                "icon button"
               ],
-              "topRow": 21,
-              "bottomRow": 25,
+              "topRow": 12,
+              "bottomRow": 16,
               "parentRowSpace": 10,
-              "type": "BUTTON_WIDGET",
+              "type": "ICON_BUTTON_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 20.0625,
@@ -300,7 +311,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 16,
+              "leftColumn": 36,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -309,23 +320,245 @@
                   "key": "borderRadius"
                 }
               ],
-              "text": "提交",
               "isDisabled": false,
-              "key": "wou31tlox9",
+              "key": "jd4pcud344",
               "isDeprecated": false,
-              "rightColumn": 32,
-              "isDefaultClickDisabled": true,
-              "widgetId": "k2m2ys76lc",
+              "rightColumn": 38,
+              "iconName": "plus",
+              "widgetId": "h9zao90xnf",
               "isVisible": true,
-              "recaptchaType": "V3",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "buttonVariant": "PRIMARY",
-              "placement": "CENTER"
+              "buttonVariant": "PRIMARY"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Echarts1",
+              "allowScroll": false,
+              "displayName": "Echarts",
+              "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+              "searchTags": [
+                "graph",
+                "echart",
+                "chart",
+                "visualisations"
+              ],
+              "topRow": 0,
+              "bottomRow": 16,
+              "parentRowSpace": 10,
+              "customEchartConfig": {
+                "title": {
+                  "text": "基础折线图"
+                },
+                "xAxis": {
+                  "type": "category",
+                  "data": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ]
+                },
+                "yAxis": {
+                  "type": "value"
+                },
+                "series": [
+                  {
+                    "data": [
+                      150,
+                      230,
+                      224,
+                      218,
+                      135,
+                      147,
+                      260
+                    ],
+                    "type": "line"
+                  }
+                ]
+              },
+              "type": "ECHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "dwq3dukrip": {
+                  "type": "line",
+                  "seriesName": "秋季系列",
+                  "data": [
+                    {
+                      "value": 335,
+                      "name": "衬衫"
+                    },
+                    {
+                      "value": 234,
+                      "name": "羊毛衫"
+                    },
+                    {
+                      "value": 1548,
+                      "name": "雪纺衫"
+                    },
+                    {
+                      "value": 758,
+                      "name": "裤子"
+                    },
+                    {
+                      "value": 358,
+                      "name": "高跟鞋"
+                    },
+                    {
+                      "value": 658,
+                      "name": "袜子"
+                    }
+                  ]
+                }
+              },
+              "animateLoading": true,
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 12,
+              "dynamicBindingPathList": [
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "mycustom": 2,
+              "key": "e331nib0tt",
+              "isDeprecated": false,
+              "rightColumn": 36,
+              "widgetId": "2u2igf66zp",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "销量",
+              "chartName": "123",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "xAxisName": "品类",
+              "chartType": "LINE_CHART"
+            },
+            {
+              "widgetName": "CategorySlider1",
+              "displayName": "类别滑动条",
+              "iconSVG": "/static/media/icon.3cc7446d56f9cfd524ec0c46ef9f17dd.svg",
+              "labelText": "尺寸",
+              "searchTags": [
+                "range",
+                "category slider"
+              ],
+              "topRow": 16,
+              "bottomRow": 24,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "CATEGORY_SLIDER_WIDGET",
+              "hideCard": false,
+              "defaultOptionValue": "md",
+              "animateLoading": true,
+              "parentColumnSpace": 20.0625,
+              "leftColumn": 9,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "shouldTruncate": false,
+              "labelPosition": "Left",
+              "options": [
+                {
+                  "label": "特别小",
+                  "value": "xs"
+                },
+                {
+                  "label": "小",
+                  "value": "sm"
+                },
+                {
+                  "label": "中",
+                  "value": "md"
+                },
+                {
+                  "label": "大",
+                  "value": "lg"
+                },
+                {
+                  "label": "特别大",
+                  "value": "xl"
+                }
+              ],
+              "isDisabled": false,
+              "key": "877h8ael6y",
+              "labelTextSize": "0.875rem",
+              "isDeprecated": false,
+              "rightColumn": 49,
+              "widgetId": "fjfe62e3qu",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "sliderSize": "m",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "showMarksLabel": true
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "IconButton3",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "图标按钮",
+              "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+              "searchTags": [
+                "click",
+                "submit",
+                "icon button"
+              ],
+              "topRow": 24,
+              "bottomRow": 28,
+              "parentRowSpace": 10,
+              "type": "ICON_BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 21,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "isDisabled": false,
+              "key": "pg582uuwiz",
+              "isDeprecated": false,
+              "rightColumn": 25,
+              "iconName": "automatic-updates",
+              "widgetId": "hbq8wlicuq",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY"
             }
           ]
         },
